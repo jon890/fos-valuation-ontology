@@ -7,7 +7,6 @@
   },
   "queue": {
     "method": "merge",
-    "after_merged": "bash \"$(git rev-parse --show-toplevel)/scripts/deploy-prod.sh\"",
     "docs_glob": ["**/*.md", "tasks/**"]
   }
 }
