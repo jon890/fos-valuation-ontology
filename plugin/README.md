@@ -31,6 +31,15 @@ codex plugin add valuation-ontology@fos-valuation-ontology
 설치하면 연결 주소가 함께 등록됩니다. 그다음에는 Codex 에서 「가치투자 온톨로지 연결해 줘」 라고 말하면 됩니다.
 브라우저가 열리지 않으면 터미널에서 `codex mcp login valuation-ontology` 를 실행합니다.
 
+## assistant.json
+
+`assistant.json` 은 이 플러그인을 Claude Code 나 Codex 가 아니라 fos-assistant 같은 에이전트 앱에 붙일 때 그 앱이 읽는 선언 파일입니다.
+앱은 이 파일로 연동 토큰 입력 칸, 연결 확인 도구, 도구마다의 위험도와 승인 방식을 정합니다.
+조회 도구는 승인 없이 쓰고, 체결 기록과 제안 올리기는 매번 승인을 받습니다.
+Claude Code 와 Codex 는 이 파일을 읽지 않고 `.mcp.json` 의 주소로 OAuth 로그인해 붙습니다.
+그래서 인증 헤더는 `.mcp.json` 이 아니라 이 파일에만 둡니다.
+원격 MCP 서버의 도구(`McpTools.kt`)를 더하거나 바꾸면 `assistant.json` 의 `tools` 도 같은 PR 에서 맞춥니다.
+
 ## 연결 끊기
 
 웹 앱 오른쪽 위 「더보기」 에서 「연동」 을 열고, 「연결된 앱」 에서 끊을 연결의 「연결 끊기」 를 누릅니다.
