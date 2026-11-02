@@ -2,7 +2,8 @@
   "finish": {
     "run": "run_9b1b8772b620",
     "base_branch": "main",
-    "specs_dir": ".orch/specs"
+    "specs_dir": ".orch/specs",
+    "board": "../fos-assistant/.omc/board.json"
   },
   "queue": {
     "method": "merge",
