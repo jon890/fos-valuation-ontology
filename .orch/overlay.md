@@ -20,7 +20,7 @@
 ## 배포
 
 **머지한 뒤에는 묻지 않고 운영에 배포한다(사용자 지시 2026-10-23).**
-머지 큐(`merge-with-finish.py`)가 `.orch/config.json` 의 `queue.after_merged` 로 `scripts/deploy-prod.sh` 를 부른다. 문서만 머지했으면(`docs_glob`) 배포하지 않는다.
+머지 큐가 끝난 뒤 `.orch/hooks/after-queue.ts` 가 `scripts/deploy-prod.sh` 를 부른다. 문서만 머지했으면(`docs_glob`) 배포하지 않는다.
 배포 스크립트가 마지막에 `scripts/smoke-prod.ts` 로 운영을 확인한다.
 머지 큐를 쓰지 않고 머지했으면 그 스크립트를 직접 부른다. 배포 결과(이미지 실행 id, health)는 사용자에게 알린다.
 
