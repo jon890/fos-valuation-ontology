@@ -1,7 +1,7 @@
 [versions]
-# Kotlin 은 Spring Boot 4.1.0 BOM 의 kotlin.version 과 맞춘다
+# Kotlin 은 Spring Boot 4.1.2 BOM 의 kotlin.version 과 맞춘다
 kotlin = "2.3.21"
-spring-boot = "4.1.0"
+spring-boot = "4.1.2"
 mcp = "2.1.0"
 neo4j-harness = "5.26.30"
 mock-oauth2-server = "3.0.1"
